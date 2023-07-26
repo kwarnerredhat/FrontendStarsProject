@@ -1,8 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+    <head>
+        <title>Khalil Frontend Project</title>
+    </head>
+    <body>
 <div class="container">
 	<h1>Pink Balloon</h1>
 	<div class="product">
 		<img src="https://images.unsplash.com/photo-1525268771113-32d9e9021a97?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODYxNTY5MzB8&ixlib=rb-4.0.3&q=85" width="350" length="350" class="center" alt="Three balloons in shades of pink, being held by three hands in front of a light pink background. ">
-		<!-- photo by Amy Shamblen for Unsplash -->
 		<ul>
 			<li>Balloon ships uninflated, air not included.</li>
 			<li> Choose your shade:
@@ -13,21 +21,24 @@
 				</ul>
 		</ul>
 	</div>
-	<div class="review-input">
+    <form id="reviewForm">
+        <label for="rating">Select star rating:</label>
+        <p>Rating: <span class="star-rating empty">★★★★★</span></p>
+        <select id="rating" name="rating">
+          <option value="1">1 star</option>
+          <option value="2">2 stars</option>
+          <option value="3">3 stars</option>
+          <option value="4">4 stars</option>
+          <option value="5">5 stars</option>
+        </select>
+        <label for="review">Review:</label>
+        <textarea id="review" name="review" rows="4" cols="50"></textarea>
     
-        </div>
-		<h3>Share Your Review</h3>
-		<p>Rating: <span class="star-rating empty">★★★★★</span></p>
-        <div id="reviews">
-        </div>
-        <input type="text" id="summary" placeholder="Enter summary">
-        <textarea id="review" placeholder="Write your review"></textarea>
-        <button onclick="submitReview()">Submit</button>
-		</div>
-	</div>
-</form>
-
-	<div class="reviews">
+        <button type="submit">Submit</button>
+      </form>
+    
+      <div id="reviews">
+    
 
 		<h2>Reviews</h2>
 
@@ -51,6 +62,10 @@
 			<p>Rating: <span class="star-rating">★★</span></p>
 			<p>Color is nice but I'm disappointed that it wasn't already inflated. I had to blow it up myself.</p>
 		</div>
+    
 <script src="script.js"></script>
+
 	</div>
 </div>
+</body>
+</html>
